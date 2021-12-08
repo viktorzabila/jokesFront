@@ -95,25 +95,7 @@ export const About = createVisualComponent({
     const leadingAuthors = getAuthors(AboutCfg.leadingAuthors);
     const otherAuthors = getAuthors(AboutCfg.otherAuthors);
     const attrs = UU5.Common.VisualComponent.getAttrs(props, CLASS_NAMES.main());
-    return (
-      <UU5.Bricks.Section {...attrs}>
-        <Plus4U5.App.ArtifactSetter territoryBaseUri="" artifactId="" />
-
-        <Plus4U5.App.About header={header} content={about} />
-        <Plus4U5.App.Licence organisation={organisation} authorities={authorities} />
-        <Plus4U5.App.Authors header={creatorsHeader} leadingAuthors={leadingAuthors} otherAuthors={otherAuthors} />
-        <Plus4U5.App.Technologies technologies={technologies} content={content} />
-        {licence.termsOfUse && (
-          <UU5.Bricks.P className={CLASS_NAMES.termsOfUse()}>
-            <UU5.Bricks.Link href={licence.termsOfUse} target="_blank" content={termsOfUse} />
-          </UU5.Bricks.P>
-        )}
-        <UU5.Bricks.Div className={CLASS_NAMES.logos()}>
-          <UU5.Bricks.Image responsive={false} src="assets/plus4u.svg" />
-          <UU5.Bricks.Image responsive={false} src="assets/unicorn.svg" />
-        </UU5.Bricks.Div>
-      </UU5.Bricks.Section>
-    );
+    return <UU5.Bricks.Section {...attrs}></UU5.Bricks.Section>;
   },
   //@@viewOff:render
 });

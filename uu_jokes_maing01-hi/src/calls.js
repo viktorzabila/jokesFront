@@ -13,8 +13,28 @@ let Calls = {
     return response.data;
   },
 
-  loadDemoContent(dtoIn) {
-    let commandUri = Calls.getCommandUri("loadDemoContent");
+  listJokes(dtoIn) {
+    let commandUri = Calls.getCommandUri("joke/list");
+    return Calls.call("get", commandUri, dtoIn);
+  },
+
+  createJoke(dtoIn) {
+    let commandUri = Calls.getCommandUri("joke/create");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
+  updateJoke(dtoIn) {
+    let commandUri = Calls.getCommandUri("joke/update");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
+  deleteJoke(dtoIn) {
+    let commandUri = Calls.getCommandUri("joke/delete");
+    return Calls.call("post", commandUri, dtoIn);
+  },
+
+  loadJokesInstance(dtoIn) {
+    let commandUri = Calls.getCommandUri("jokesInstance/load");
     return Calls.call("get", commandUri, dtoIn);
   },
 
